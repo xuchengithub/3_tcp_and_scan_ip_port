@@ -10,10 +10,10 @@ def main():
     pre_ip = ip.split(".", 4)
     print(f"pre_ip:{pre_ip}")
     # 获取开始IP的最后部分，并转换成整数类型
-    start = 215
+    start = 0
 
     # 获取结束IP的最后部分，并转换为整数类型
-    end = 222
+    end = 255
 
     print(f"start :{start}")
     print(f"end:{end}")
@@ -25,7 +25,7 @@ def main():
 
         try:
             sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sk.settimeout(0.5)
+            sk.settimeout(0.2)
             print(f"ip:{ip}:{port}")
             sk.connect((ip, port))
             sk.settimeout(None)
