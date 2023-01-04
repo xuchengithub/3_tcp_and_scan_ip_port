@@ -18,7 +18,7 @@ def main():
     print(f"start :{start}")
     print(f"end:{end}")
     # 从起始IP最后数字到结束IP最后数字加一遍历
-    port = 50001
+    port =22 
     for i in range(start, end+1):
         # IP的前三部分加小圆点加最后部分，组合成IP
         ip = pre_ip[0]+'.'+pre_ip[1]+'.'+pre_ip[2]+'.'+str(i)
